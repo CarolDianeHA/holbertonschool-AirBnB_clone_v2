@@ -36,7 +36,7 @@ def display_python(text='is cool'):
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def display_number(n):
-    """The function "display_n" returns text."""
+    """The function "display_number" returns integer number."""
     return '{} is a number'.format(n)
 
 
