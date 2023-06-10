@@ -108,4 +108,4 @@ class DBStorage:
         Close the database storage session.
         """
         if self.__session is not None:
-            self.__session.remove()
+            self.__session.close()
