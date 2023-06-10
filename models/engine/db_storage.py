@@ -107,4 +107,5 @@ class DBStorage:
         """
         Close the database storage session.
         """
-        self.__session.remove()
+        if self.__session is not None:
+            self.__session.remove()
