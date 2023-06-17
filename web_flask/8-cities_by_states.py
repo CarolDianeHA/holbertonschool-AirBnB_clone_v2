@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Script that starts a Flask web application."""
+"""starts flash app"""
+
+# importing Flask task
 from flask import Flask, render_template
 from models import storage
 from models.state import State
@@ -8,22 +10,25 @@ from models.state import State
 app = Flask(__name__)
 
 
-@app.route('/state_list', strict_slashes=False)
+@app.route('/states_list', strict_slashes=False)
 def states_list():
-    states_li = storage.all(State).values()
-    return render_template('7-states_list.html', states=states_li)
+    """ returns a list of all states in the Database """
+    state_li = storage.all(State).values()
+    return render_template('7-states_list.html', states=state_li)
 
 
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_by_states():
-    states_li = storage.all(State).values()
-    return render_template('8-cities_by_states.html', states=states_li)
+    "returns list of City objects"
+    state_li = storage.all(State).values()
+    return render_template('8-cities_by_states.html', states=state_li)
 
 
 @app.teardown_appcontext
 def teardown_appcontext(exception):
+    """ closese session """
     storage.close()
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0')
