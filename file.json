@@ -36,5 +36,19 @@
     "created_at": "2023-06-10T17:51:39.318563",
     "updated_at": "2023-06-10T17:51:39.318594",
     "__class__": "City"
+  },
+  "State.6dd41d8d-80e9-448f-9318-92c989eeddb8": {
+    "id": "6dd41d8d-80e9-448f-9318-92c989eeddb8",
+    "created_at": "2023-07-18T23:53:30.921517",
+    "updated_at": "2023-07-18T23:53:30.921517",
+    "name": "California",
+    "__class__": "State"
+  },
+  "State.ccd7985f-a0a7-45db-9100-dd9aa30d7f09": {
+    "id": "ccd7985f-a0a7-45db-9100-dd9aa30d7f09",
+    "created_at": "2023-07-18T23:53:30.921767",
+    "updated_at": "2023-07-18T23:53:30.921767",
+    "name": "Nevada",
+    "__class__": "State"
   }
 }
